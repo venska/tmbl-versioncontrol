@@ -1,0 +1,388 @@
+[gd_scene load_steps=53 format=2]
+
+[ext_resource path="res://Scripts/Stage1.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/red_crystal.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/Screenshake.gd" type="Script" id=3]
+[ext_resource path="res://textures/UI Stuff/pixellana.tres" type="DynamicFont" id=4]
+[ext_resource path="res://textures/crystals/red_crystal.png" type="Texture" id=5]
+[ext_resource path="res://textures/Lights/torch/torch3.png" type="Texture" id=6]
+[ext_resource path="res://textures/Lights/torch/torch4.png" type="Texture" id=7]
+[ext_resource path="res://textures/ghostanim/ghostidle1.png" type="Texture" id=8]
+[ext_resource path="res://textures/Lights/torch/torch1.png" type="Texture" id=9]
+[ext_resource path="res://textures/decals/sword_01.png" type="Texture" id=10]
+[ext_resource path="res://textures/decals/sword_02.png" type="Texture" id=11]
+[ext_resource path="res://textures/ghostanim/ghostidle18.png" type="Texture" id=12]
+[ext_resource path="res://textures/Lights/torch/torch5.png" type="Texture" id=13]
+[ext_resource path="res://textures/ghostanim/ghostidle9.png" type="Texture" id=14]
+[ext_resource path="res://textures/Lights/torch/torch2.png" type="Texture" id=15]
+[ext_resource path="res://textures/ghostanim/ghostidle12.png" type="Texture" id=16]
+[ext_resource path="res://textures/ghostanim/ghostidle3.png" type="Texture" id=17]
+[ext_resource path="res://textures/ghostanim/ghostidle19.png" type="Texture" id=18]
+[ext_resource path="res://textures/Debug/debugcube1.png" type="Texture" id=19]
+[ext_resource path="res://Tileset/BlueBrick/BlackBox.png" type="Texture" id=20]
+[ext_resource path="res://textures/Lights/light.png" type="Texture" id=21]
+[ext_resource path="res://Tileset/minbackground.png" type="Texture" id=22]
+[ext_resource path="res://textures/ghostanim/ghostidle20.png" type="Texture" id=23]
+[ext_resource path="res://textures/ghostanim/ghostidle11.png" type="Texture" id=24]
+[ext_resource path="res://textures/ghostanim/ghostidle17.png" type="Texture" id=25]
+[ext_resource path="res://textures/ghostanim/ghostidle10.png" type="Texture" id=26]
+[ext_resource path="res://textures/ghostanim/ghostidle13.png" type="Texture" id=27]
+[ext_resource path="res://textures/ghostanim/ghostidle2.png" type="Texture" id=28]
+[ext_resource path="res://textures/ghostanim/ghostidle5.png" type="Texture" id=29]
+[ext_resource path="res://textures/ghostanim/ghostidle4.png" type="Texture" id=30]
+[ext_resource path="res://textures/ghostanim/ghostidle8.png" type="Texture" id=31]
+[ext_resource path="res://textures/ghostanim/ghostidle7.png" type="Texture" id=32]
+[ext_resource path="res://textures/ghostanim/ghostidle16.png" type="Texture" id=33]
+[ext_resource path="res://textures/ghostanim/ghostidle14.png" type="Texture" id=34]
+[ext_resource path="res://textures/ghostanim/ghostidle15.png" type="Texture" id=35]
+[ext_resource path="res://textures/ghostanim/ghostidle6.png" type="Texture" id=36]
+[ext_resource path="res://Tileset/decal_skulls.tres" type="TileSet" id=37]
+[ext_resource path="res://Tileset/BlueBrick/BlueBrick.tres" type="TileSet" id=38]
+[ext_resource path="res://textures/Lights/redlight.png" type="Texture" id=39]
+[ext_resource path="res://Scripts/Area2D.gd" type="Script" id=40]
+[ext_resource path="res://Scripts/Light2D.gd" type="Script" id=41]
+[ext_resource path="res://Scripts/Player.gd" type="Script" id=42]
+[ext_resource path="res://Stalker/Stalker.tscn" type="PackedScene" id=43]
+
+[sub_resource type="TileSet" id=1]
+0/name = "sword_01.png 0"
+0/texture = ExtResource( 10 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 32, 32 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "sword_02.png 1"
+1/texture = ExtResource( 11 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 0, 32, 32 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 8 ), ExtResource( 28 ), ExtResource( 17 ), ExtResource( 30 ), ExtResource( 29 ), ExtResource( 36 ), ExtResource( 32 ), ExtResource( 31 ), ExtResource( 14 ), ExtResource( 26 ), ExtResource( 24 ), ExtResource( 27 ), ExtResource( 16 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 33 ), ExtResource( 25 ), ExtResource( 18 ), ExtResource( 12 ), ExtResource( 23 ) ],
+"loop": true,
+"name": "idle",
+"speed": 10.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 4.40732, 5.22052 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 4.43564, 5.21873 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 22, 22 )
+
+[sub_resource type="OccluderPolygon2D" id=6]
+polygon = PoolVector2Array( -21.9348, -22.2819, 23.1903, -21.8085, 23.3481, 22.0543, -22.2504, 21.8966 )
+
+[sub_resource type="CircleShape2D" id=7]
+radius = 107.461
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 136.659, 62.7712 )
+
+[sub_resource type="SpriteFrames" id=9]
+animations = [ {
+"frames": [ ExtResource( 9 ), ExtResource( 15 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "default",
+"speed": 30.0
+} ]
+
+[node name="Stage1" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="DecalSwords" type="TileMap" parent="."]
+tile_set = SubResource( 1 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 65540, 0, 0, 917518, 1, 0 )
+
+[node name="DecalSkulls" type="TileMap" parent="."]
+tile_set = ExtResource( 37 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 262144, 1, 0, 655380, 3, 0, 655381, 0, 0, 917516, 2, 0, 917520, 1, 0, 917521, 3, 0 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="BlackBorder" type="Sprite" parent="."]
+scale = Vector2( 2.57194, 1.76781 )
+texture = ExtResource( 22 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite2" type="Sprite" parent="BlackBorder"]
+position = Vector2( -214.097, -45.3011 )
+scale = Vector2( 2.72168, 11.3134 )
+texture = ExtResource( 20 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite3" type="Sprite" parent="BlackBorder"]
+position = Vector2( 25.4106, -153.91 )
+scale = Vector2( 32.6602, 2.26269 )
+texture = ExtResource( 20 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite4" type="Sprite" parent="BlackBorder"]
+position = Vector2( 270.557, -45.3011 )
+scale = Vector2( 2.01696, 11.3134 )
+texture = ExtResource( 20 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite5" type="Sprite" parent="BlackBorder"]
+position = Vector2( 215.151, 9.00306 )
+scale = Vector2( 5.05455, 4.52537 )
+texture = ExtResource( 20 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite6" type="Sprite" parent="BlackBorder"]
+position = Vector2( -7.24961, 27.1051 )
+scale = Vector2( 23.1343, 2.26269 )
+texture = ExtResource( 20 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="BlueBrickTileset" type="TileMap" parent="BlackBorder/Sprite6"]
+position = Vector2( 0.31337, -11.9791 )
+scale = Vector2( 0.0168067, 0.25 )
+tile_set = ExtResource( 38 )
+cell_size = Vector2( 16, 16 )
+collision_layer = 16
+collision_mask = 16
+format = 1
+tile_data = PoolIntArray( -917535, 0, 0, -917534, 1, 0, -917533, 1, 0, -917532, 1, 0, -917531, 1, 0, -917530, 1, 0, -917529, 1, 0, -917528, 1, 0, -917527, 1, 0, -917526, 1, 0, -917525, 1, 0, -917524, 1, 0, -917523, 1, 0, -917522, 1, 0, -917521, 1, 0, -917520, 1, 0, -917519, 1, 0, -917518, 1, 0, -917517, 1, 0, -917516, 1, 0, -917515, 1, 0, -917514, 1, 0, -917513, 1, 0, -917512, 1, 0, -917511, 1, 0, -917510, 1, 0, -917509, 1, 0, -917508, 1, 0, -917507, 1, 0, -917506, 1, 0, -917505, 1, 0, -983040, 1, 0, -983039, 1, 0, -983038, 1, 0, -983037, 1, 0, -983036, 1, 0, -983035, 1, 0, -983034, 1, 0, -983033, 1, 0, -983032, 1, 0, -983031, 1, 0, -983030, 1, 0, -983029, 1, 0, -983028, 1, 0, -983027, 1, 0, -983026, 1, 0, -983025, 1, 0, -983024, 1, 0, -983023, 1, 0, -983022, 1, 0, -983021, 1, 0, -983020, 1, 0, -983019, 1, 0, -983018, 1, 0, -983017, 1, 0, -983016, 1, 0, -983015, 1, 0, -983014, 1, 0, -983013, 1, 0, -983012, 1, 0, -983011, 1, 0, -983010, 1, 0, -983009, 1, 0, -983008, 1, 0, -983007, 1, 0, -983006, 1, 0, -983005, 1, 0, -983004, 1, 0, -983003, 1, 0, -983002, 1, 0, -983001, 1, 0, -983000, 0, 0, -851999, 3, 0, -917464, 2, 0, -786463, 3, 0, -851928, 2, 0, -720927, 3, 0, -786392, 2, 0, -655391, 3, 0, -720856, 2, 0, -589855, 3, 0, -655320, 2, 0, -524319, 3, 0, -589784, 2, 0, -458783, 3, 0, -524248, 2, 0, -393247, 3, 0, -458712, 2, 0, -327711, 3, 0, -393176, 2, 0, -262175, 3, 0, -327640, 2, 0, -196639, 3, 0, -262117, 5, 0, -262116, 4, 0, -262115, 4, 0, -262114, 4, 0, -262113, 4, 0, -262112, 4, 0, -262111, 4, 0, -262110, 4, 0, -262109, 4, 0, -262108, 4, 0, -262107, 4, 0, -262106, 4, 0, -262105, 4, 0, -262104, 0, 0, -131103, 3, 0, -196581, 2, 0, -65567, 3, 0, -131045, 2, 0, -31, 3, 0, -65509, 2, 0, 65505, 0, 0, 65506, 4, 0, 65507, 4, 0, 65508, 4, 0, 65509, 4, 0, 65510, 4, 0, 65511, 4, 0, 65512, 4, 0, 65513, 4, 0, 65514, 4, 0, 65515, 4, 0, 65516, 4, 0, 65517, 4, 0, 65518, 4, 0, 65519, 4, 0, 65520, 4, 0, 65521, 4, 0, 65522, 4, 0, 65523, 4, 0, 65524, 4, 0, 65525, 4, 0, 65526, 4, 0, 65527, 4, 0, 65528, 4, 0, 65529, 4, 0, 65530, 4, 0, 65531, 4, 0, 65532, 4, 0, 65533, 4, 0, 65534, 4, 0, 65535, 4, 0, 0, 4, 0, 1, 4, 0, 2, 4, 0, 3, 4, 0, 4, 4, 0, 5, 4, 0, 6, 4, 0, 7, 4, 0, 8, 4, 0, 9, 4, 0, 10, 4, 0, 11, 4, 0, 12, 4, 0, 13, 4, 0, 14, 4, 0, 15, 4, 0, 16, 4, 0, 17, 4, 0, 18, 4, 0, 19, 4, 0, 20, 4, 0, 21, 4, 0, 22, 4, 0, 23, 4, 0, 24, 4, 0, 25, 4, 0, 26, 4, 0, 27, 0, 0 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Player" type="KinematicBody2D" parent="." groups=[
+"Player",
+]]
+position = Vector2( -0.175598, -16 )
+collision_layer = 30
+script = ExtResource( 42 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Player"]
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 2 )
+animation = "idle"
+frame = 5
+playing = true
+offset = Vector2( 0, -1.5 )
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+current = true
+process_mode = 0
+limit_left = -600
+limit_top = -305
+limit_right = 737
+limit_bottom = 85
+limit_smoothed = true
+smoothing_enabled = true
+smoothing_speed = 15.0
+editor_draw_limits = true
+__meta__ = {
+"_editor_description_": "limit left = -320
+top = -64
+right = 1022
+bottom = 320
+"
+}
+
+[node name="CanvasModulate" type="CanvasModulate" parent="Player/Camera2D"]
+color = Color( 0, 0, 0, 1 )
+
+[node name="Light2D" type="Light2D" parent="Player"]
+position = Vector2( -0.324585, -4.08112 )
+texture = ExtResource( 21 )
+range_height = 171.5
+range_layer_min = -1
+range_layer_max = 1
+shadow_enabled = true
+shadow_gradient_length = 21.6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2( -0.162598, -0.589752 )
+scale = Vector2( 1, 1.5 )
+shape = SubResource( 3 )
+
+[node name="Position2D" type="Position2D" parent="Player"]
+position = Vector2( 21.1756, -1.93715e-07 )
+
+[node name="Area2D" type="Area2D" parent="Player"]
+collision_layer = 1024
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Player/Area2D"]
+position = Vector2( -0.175598, -0.533447 )
+scale = Vector2( 1, 1.5 )
+shape = SubResource( 4 )
+disabled = true
+
+[node name="ghost_timer" type="Timer" parent="Player"]
+wait_time = 0.1
+autostart = true
+
+[node name="Stalker" parent="." instance=ExtResource( 43 )]
+position = Vector2( 153.075, -120.075 )
+
+[node name="box" type="KinematicBody2D" parent="."]
+position = Vector2( 312, -168 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="box"]
+position = Vector2( 0.75, 0 )
+scale = Vector2( 1.03333, 1 )
+texture = ExtResource( 19 )
+region_rect = Rect2( 28, 25, 0, 0 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="box"]
+position = Vector2( 0.75, 0 )
+scale = Vector2( 1.03333, 1 )
+shape = SubResource( 5 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="box"]
+occluder = SubResource( 6 )
+
+[node name="red_crystal" type="Area2D" parent="."]
+position = Vector2( -424, -32 )
+collision_layer = 78
+collision_mask = 78
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="red_crystal"]
+texture = ExtResource( 5 )
+
+[node name="Light2D" type="Light2D" parent="red_crystal"]
+texture = ExtResource( 39 )
+texture_scale = 0.5
+color = Color( 1, 0, 0, 1 )
+energy = 1.52
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="red_crystal"]
+shape = SubResource( 7 )
+
+[node name="red_crystal2" type="Area2D" parent="."]
+position = Vector2( -184, -40 )
+collision_layer = 78
+collision_mask = 78
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="red_crystal2"]
+texture = ExtResource( 5 )
+
+[node name="Light2D" type="Light2D" parent="red_crystal2"]
+texture = ExtResource( 39 )
+texture_scale = 0.5
+color = Color( 1, 0, 0, 1 )
+energy = 1.52
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="red_crystal2"]
+shape = SubResource( 7 )
+
+[node name="Torch" type="Area2D" parent="."]
+position = Vector2( 519.448, -126.02 )
+collision_layer = 78
+collision_mask = 78
+script = ExtResource( 40 )
+__meta__ = {
+"_edit_group_": true
+}
+is_toggleable = true
+
+[node name="Light2D" type="Light2D" parent="Torch"]
+enabled = false
+texture = ExtResource( 39 )
+color = Color( 1, 0.631373, 0, 1 )
+energy = 1.73
+script = ExtResource( 41 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torch"]
+shape = SubResource( 8 )
+
+[node name="Sprite" type="AnimatedSprite" parent="Torch"]
+frames = SubResource( 9 )
+frame = 2
+playing = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+margin_left = 0.449677
+margin_top = 261.546
+margin_right = 95.4497
+margin_bottom = 272.546
+size_flags_horizontal = 0
+size_flags_vertical = 0
+size_flags_stretch_ratio = 0.0
+custom_fonts/font = ExtResource( 4 )
+text = "dev-build  0.4 "
+align = 3
+valign = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Screenshake" type="Node2D" parent="."]
+position = Vector2( 319.912, 166.993 )
+script = ExtResource( 3 )
+
+[node name="Tween" type="Tween" parent="Screenshake"]
+
+[node name="Control" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="timeout" from="Player/ghost_timer" to="Player" method="_on_ghost_timer_timeout"]
+[connection signal="body_entered" from="red_crystal" to="red_crystal" method="_on_red_crystal_body_entered"]
+[connection signal="body_entered" from="red_crystal2" to="red_crystal2" method="_on_red_crystal_body_entered"]
+[connection signal="area_entered" from="Torch" to="Torch" method="_on_Area2D2_area_entered"]
+[connection signal="body_entered" from="Torch" to="Torch" method="_on_Area2D2_body_entered"]
+[connection signal="tween_completed" from="Screenshake/Tween" to="Screenshake" method="_on_Tween_tween_completed"]

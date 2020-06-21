@@ -1,0 +1,80 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Scripts/Titlescreen.gd" type="Script" id=1]
+[ext_resource path="res://textures/UI Stuff/Menu_Pause/Quit_selectedt.png" type="Texture" id=2]
+[ext_resource path="res://textures/UI Stuff/TMBLTS.png" type="Texture" id=3]
+[ext_resource path="res://Tileset/untitled_returns.png" type="Texture" id=4]
+[ext_resource path="res://textures/UI Stuff/Menu_Pause/Quit.png" type="Texture" id=5]
+[ext_resource path="res://textures/UI Stuff/Menu_Pause/Play_selected.png" type="Texture" id=6]
+[ext_resource path="res://textures/UI Stuff/Menu_Pause/Play.png" type="Texture" id=7]
+[ext_resource path="res://textures/UI Stuff/svenska.png" type="Texture" id=8]
+[ext_resource path="res://textures/UI Stuff/Menu_Pause/MenuScreen_scene.png" type="Texture" id=9]
+
+[node name="Titlescreen" type="Node"]
+script = ExtResource( 1 )
+
+[node name="Sprite3" type="Sprite" parent="."]
+position = Vector2( 240, 256 )
+scale = Vector2( 0.760001, 0.120001 )
+texture = ExtResource( 4 )
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 9 )
+centered = false
+
+[node name="MarginContainer" type="MarginContainer" parent="Sprite"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -21.3333
+margin_bottom = 42.6667
+custom_constants/margin_top = 20
+custom_constants/margin_bottom = 20
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Sprite/MarginContainer"]
+margin_left = 94.0
+margin_top = 124.0
+margin_right = 546.0
+margin_bottom = 259.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_constants/separation = 16
+
+[node name="TextureRect" type="TextureRect" parent="Sprite/MarginContainer/VBoxContainer"]
+margin_right = 452.0
+margin_bottom = 51.0
+texture = ExtResource( 3 )
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Sprite/MarginContainer/VBoxContainer"]
+margin_left = 162.0
+margin_top = 67.0
+margin_right = 290.0
+margin_bottom = 135.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="TextureButton" type="TextureButton" parent="Sprite/MarginContainer/VBoxContainer/VBoxContainer2"]
+margin_right = 128.0
+margin_bottom = 32.0
+texture_normal = ExtResource( 7 )
+texture_focused = ExtResource( 6 )
+
+[node name="TextureButton2" type="TextureButton" parent="Sprite/MarginContainer/VBoxContainer/VBoxContainer2"]
+margin_top = 36.0
+margin_right = 128.0
+margin_bottom = 68.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource( 5 )
+texture_focused = ExtResource( 2 )
+stretch_mode = 3
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 8, 264 )
+scale = Vector2( 0.0829045, 0.099375 )
+texture = ExtResource( 8 )
+[connection signal="pressed" from="Sprite/MarginContainer/VBoxContainer/VBoxContainer2/TextureButton" to="." method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="Sprite/MarginContainer/VBoxContainer/VBoxContainer2/TextureButton2" to="." method="_on_TextureButton2_pressed"]

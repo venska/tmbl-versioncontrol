@@ -1,0 +1,12 @@
+[gd_scene format=2]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="Label" type="Label" parent="."]
+margin_top = 256.0
+margin_right = 40.0
+margin_bottom = 270.0
+text = "dev pre-alpha 0.2"
+__meta__ = {
+"_edit_use_anchors_": false
+}
