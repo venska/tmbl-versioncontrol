@@ -1,3 +1,10 @@
+# What is There Must be Light?
+There Must be Light is a solo-indie game project, every single file in this project was created by me, with help from kind people(<3)
+TMBL Will be free on launch in itch.io and gamejolt
+
+![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
+
+
 # tmbl-versioncontrol
 IGNORE .IMPORT FILES
 
