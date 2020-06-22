@@ -23,4 +23,18 @@ Stable Version for There Must be Light
   * Added CanvasModulate for darkness effect
   * Multiple Bug-fixes
     * Fixed crashing bug upon pressing (old) Play button
+  * **Major Fix to Incorrect Position Data
   
+  #### Dev-build 0.5
+    * Fixed Torch Area2D bugs
+    * Fixed CrystalTrail bugs
+    * Fixed Stalker Collision
+    * Added Blinking Ability
+      * Added Ghost Effect when Blinking
+    * Added Death Animation(Not Implemented Yet)
+    * Added func(dead) (Not Implemented Yet)
+    * Added Spikes
+    * Added Pause Menu
+    * Added New Buttons for Pause Menu
+      * Settings, Return to Menu
+    * Fixed Few Bugs
