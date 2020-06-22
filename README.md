@@ -23,7 +23,7 @@ Stable Version for There Must be Light
   * Added CanvasModulate for darkness effect
   * Multiple Bug-fixes
     * Fixed crashing bug upon pressing (old) Play button
-  * **Major Fix to Incorrect Position Data
+  * **Major Fix to Incorrect Position Data**
   
   #### Dev-build 0.5
    * Fixed Torch Area2D bugs
