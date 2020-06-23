@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=2]
+[gd_scene load_steps=45 format=2]
 
 [ext_resource path="res://Scripts/Stage1.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/red_crystal.gd" type="Script" id=2]
@@ -7,35 +7,17 @@
 [ext_resource path="res://textures/crystals/red_crystal.png" type="Texture" id=5]
 [ext_resource path="res://textures/Lights/torch/torch3.png" type="Texture" id=6]
 [ext_resource path="res://textures/Lights/torch/torch4.png" type="Texture" id=7]
-[ext_resource path="res://textures/ghostanim/ghostidle1.png" type="Texture" id=8]
+[ext_resource path="res://Textures/ghostanim/ghostidle.tres" type="SpriteFrames" id=8]
 [ext_resource path="res://textures/Lights/torch/torch1.png" type="Texture" id=9]
 [ext_resource path="res://textures/decals/sword_01.png" type="Texture" id=10]
 [ext_resource path="res://textures/decals/sword_02.png" type="Texture" id=11]
-[ext_resource path="res://textures/ghostanim/ghostidle18.png" type="Texture" id=12]
+[ext_resource path="res://Scenes/pause.tscn" type="PackedScene" id=12]
 [ext_resource path="res://textures/Lights/torch/torch5.png" type="Texture" id=13]
-[ext_resource path="res://textures/ghostanim/ghostidle9.png" type="Texture" id=14]
 [ext_resource path="res://textures/Lights/torch/torch2.png" type="Texture" id=15]
-[ext_resource path="res://textures/ghostanim/ghostidle12.png" type="Texture" id=16]
-[ext_resource path="res://textures/ghostanim/ghostidle3.png" type="Texture" id=17]
-[ext_resource path="res://textures/ghostanim/ghostidle19.png" type="Texture" id=18]
 [ext_resource path="res://textures/Debug/debugcube1.png" type="Texture" id=19]
-[ext_resource path="res://Tileset/BlueBrick/BlackBox.png" type="Texture" id=20]
+[ext_resource path="res://Tileset/untitled_returns.png" type="Texture" id=20]
 [ext_resource path="res://textures/Lights/light.png" type="Texture" id=21]
 [ext_resource path="res://Tileset/minbackground.png" type="Texture" id=22]
-[ext_resource path="res://textures/ghostanim/ghostidle20.png" type="Texture" id=23]
-[ext_resource path="res://textures/ghostanim/ghostidle11.png" type="Texture" id=24]
-[ext_resource path="res://textures/ghostanim/ghostidle17.png" type="Texture" id=25]
-[ext_resource path="res://textures/ghostanim/ghostidle10.png" type="Texture" id=26]
-[ext_resource path="res://textures/ghostanim/ghostidle13.png" type="Texture" id=27]
-[ext_resource path="res://textures/ghostanim/ghostidle2.png" type="Texture" id=28]
-[ext_resource path="res://textures/ghostanim/ghostidle5.png" type="Texture" id=29]
-[ext_resource path="res://textures/ghostanim/ghostidle4.png" type="Texture" id=30]
-[ext_resource path="res://textures/ghostanim/ghostidle8.png" type="Texture" id=31]
-[ext_resource path="res://textures/ghostanim/ghostidle7.png" type="Texture" id=32]
-[ext_resource path="res://textures/ghostanim/ghostidle16.png" type="Texture" id=33]
-[ext_resource path="res://textures/ghostanim/ghostidle14.png" type="Texture" id=34]
-[ext_resource path="res://textures/ghostanim/ghostidle15.png" type="Texture" id=35]
-[ext_resource path="res://textures/ghostanim/ghostidle6.png" type="Texture" id=36]
 [ext_resource path="res://Tileset/decal_skulls.tres" type="TileSet" id=37]
 [ext_resource path="res://Tileset/BlueBrick/BlueBrick.tres" type="TileSet" id=38]
 [ext_resource path="res://textures/Lights/redlight.png" type="Texture" id=39]
@@ -43,6 +25,9 @@
 [ext_resource path="res://Scripts/Light2D.gd" type="Script" id=41]
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=42]
 [ext_resource path="res://Stalker/Stalker.tscn" type="PackedScene" id=43]
+[ext_resource path="res://Textures/Lights/torch/torch_notlit.png" type="Texture" id=44]
+[ext_resource path="res://Scenes/Area2D.gd" type="Script" id=70]
+[ext_resource path="res://Tileset/Spikes/Spikes.tres" type="TileSet" id=71]
 
 [sub_resource type="TileSet" id=1]
 0/name = "sword_01.png 0"
@@ -74,117 +59,196 @@
 1/shapes = [  ]
 1/z_index = 0
 
-[sub_resource type="SpriteFrames" id=2]
-animations = [ {
-"frames": [ ExtResource( 8 ), ExtResource( 28 ), ExtResource( 17 ), ExtResource( 30 ), ExtResource( 29 ), ExtResource( 36 ), ExtResource( 32 ), ExtResource( 31 ), ExtResource( 14 ), ExtResource( 26 ), ExtResource( 24 ), ExtResource( 27 ), ExtResource( 16 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 33 ), ExtResource( 25 ), ExtResource( 18 ), ExtResource( 12 ), ExtResource( 23 ) ],
-"loop": true,
-"name": "idle",
-"speed": 10.0
-} ]
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 68.4727, 1.32774 )
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 4.40732, 5.22052 )
+extents = Vector2( 8, 48 )
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 4.43564, 5.21873 )
+extents = Vector2( 49.1035, 2.63602 )
 
 [sub_resource type="RectangleShape2D" id=5]
-extents = Vector2( 22, 22 )
+extents = Vector2( 3.70053, 15.5298 )
 
-[sub_resource type="OccluderPolygon2D" id=6]
-polygon = PoolVector2Array( -21.9348, -22.2819, 23.1903, -21.8085, 23.3481, 22.0543, -22.2504, 21.8966 )
+[sub_resource type="RectangleShape2D" id=13]
+extents = Vector2( 3.11066, 15.5622 )
 
-[sub_resource type="CircleShape2D" id=7]
-radius = 107.461
+[sub_resource type="RectangleShape2D" id=14]
+extents = Vector2( 64.8192, 2.88581 )
+
+[sub_resource type="RectangleShape2D" id=15]
+extents = Vector2( 15.2136, 3.28463 )
+
+[sub_resource type="RectangleShape2D" id=16]
+extents = Vector2( 3.51563, 14.8787 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 4.40732, 5.22052 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 0.37903, 4.69788 )
 
 [sub_resource type="RectangleShape2D" id=8]
-extents = Vector2( 136.659, 62.7712 )
+extents = Vector2( 22, 22 )
 
-[sub_resource type="SpriteFrames" id=9]
+[sub_resource type="OccluderPolygon2D" id=9]
+polygon = PoolVector2Array( -21.9348, -22.2819, 23.1903, -21.8085, 23.3481, 22.0543, -22.2504, 21.8966 )
+
+[sub_resource type="CircleShape2D" id=10]
+radius = 65.1257
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 80, 40 )
+
+[sub_resource type="SpriteFrames" id=12]
 animations = [ {
 "frames": [ ExtResource( 9 ), ExtResource( 15 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 13 ) ],
 "loop": true,
 "name": "default",
-"speed": 30.0
+"speed": 20.0
+}, {
+"frames": [ ExtResource( 44 ) ],
+"loop": true,
+"name": "notlit",
+"speed": 0.0
 } ]
 
 [node name="Stage1" type="Node2D"]
 script = ExtResource( 1 )
 
+[node name="Pause" type="CanvasLayer" parent="."]
+
+[node name="pause" parent="Pause" instance=ExtResource( 12 )]
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 408, 8 )
+scale = Vector2( 1.475, 0.986678 )
+texture = ExtResource( 22 )
+
+[node name="Sprite2" type="Sprite" parent="Sprite"]
+position = Vector2( 0, -202.7 )
+scale = Vector2( 1, 0.326573 )
+texture = ExtResource( 20 )
+
+[node name="Sprite9" type="Sprite" parent="Sprite"]
+position = Vector2( 366.102, 9.53674e-07 )
+scale = Vector2( 0.144068, 1.60753 )
+texture = ExtResource( 20 )
+
+[node name="Sprite10" type="Sprite" parent="Sprite"]
+position = Vector2( -406.78, 2.86102e-06 )
+scale = Vector2( 0.271186, 1.60753 )
+texture = ExtResource( 20 )
+
+[node name="Sprite3" type="Sprite" parent="Sprite"]
+position = Vector2( -122.034, -148.196 )
+scale = Vector2( 0.618644, 0.0872738 )
+texture = ExtResource( 20 )
+
+[node name="Sprite4" type="Sprite" parent="Sprite"]
+position = Vector2( 3.05176e-05, -141.89 )
+scale = Vector2( 0.220339, 0.126688 )
+texture = ExtResource( 20 )
+
+[node name="Sprite5" type="Sprite" parent="Sprite"]
+position = Vector2( -27.1186, -105.404 )
+scale = Vector2( 0.135593, 0.126688 )
+texture = ExtResource( 20 )
+
+[node name="Sprite6" type="Sprite" parent="Sprite"]
+position = Vector2( 0, 202.7 )
+scale = Vector2( 1, 0.326573 )
+texture = ExtResource( 20 )
+
+[node name="Sprite7" type="Sprite" parent="Sprite"]
+position = Vector2( -238.644, 81.0801 )
+scale = Vector2( 0.254237, 0.456076 )
+texture = ExtResource( 20 )
+
+[node name="Sprite8" type="Sprite" parent="Sprite"]
+position = Vector2( 24.4068, 136.71 )
+scale = Vector2( 0.0932203, 0.094312 )
+texture = ExtResource( 20 )
+
+[node name="Sprite11" type="Sprite" parent="Sprite"]
+position = Vector2( 226.441, 137.273 )
+scale = Vector2( 0.292373, 0.0978311 )
+texture = ExtResource( 20 )
+
 [node name="DecalSwords" type="TileMap" parent="."]
 tile_set = SubResource( 1 )
 cell_size = Vector2( 16, 16 )
 format = 1
-tile_data = PoolIntArray( 65540, 0, 0, 917518, 1, 0 )
 
 [node name="DecalSkulls" type="TileMap" parent="."]
 tile_set = ExtResource( 37 )
 cell_size = Vector2( 16, 16 )
 format = 1
-tile_data = PoolIntArray( 262144, 1, 0, 655380, 3, 0, 655381, 0, 0, 917516, 2, 0, 917520, 1, 0, 917521, 3, 0 )
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="BlackBorder" type="Sprite" parent="."]
-scale = Vector2( 2.57194, 1.76781 )
-texture = ExtResource( 22 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="Sprite2" type="Sprite" parent="BlackBorder"]
-position = Vector2( -214.097, -45.3011 )
-scale = Vector2( 2.72168, 11.3134 )
-texture = ExtResource( 20 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="Sprite3" type="Sprite" parent="BlackBorder"]
-position = Vector2( 25.4106, -153.91 )
-scale = Vector2( 32.6602, 2.26269 )
-texture = ExtResource( 20 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="Sprite4" type="Sprite" parent="BlackBorder"]
-position = Vector2( 270.557, -45.3011 )
-scale = Vector2( 2.01696, 11.3134 )
-texture = ExtResource( 20 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="Sprite5" type="Sprite" parent="BlackBorder"]
-position = Vector2( 215.151, 9.00306 )
-scale = Vector2( 5.05455, 4.52537 )
-texture = ExtResource( 20 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="Sprite6" type="Sprite" parent="BlackBorder"]
-position = Vector2( -7.24961, 27.1051 )
-scale = Vector2( 23.1343, 2.26269 )
-texture = ExtResource( 20 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="BlueBrickTileset" type="TileMap" parent="BlackBorder/Sprite6"]
-position = Vector2( 0.31337, -11.9791 )
-scale = Vector2( 0.0168067, 0.25 )
+[node name="BlueBrickTileset" type="TileMap" parent="."]
+position = Vector2( -3.8147e-05, 0.00019455 )
+scale = Vector2( 0.999999, 1 )
 tile_set = ExtResource( 38 )
 cell_size = Vector2( 16, 16 )
 collision_layer = 16
 collision_mask = 16
 format = 1
-tile_data = PoolIntArray( -917535, 0, 0, -917534, 1, 0, -917533, 1, 0, -917532, 1, 0, -917531, 1, 0, -917530, 1, 0, -917529, 1, 0, -917528, 1, 0, -917527, 1, 0, -917526, 1, 0, -917525, 1, 0, -917524, 1, 0, -917523, 1, 0, -917522, 1, 0, -917521, 1, 0, -917520, 1, 0, -917519, 1, 0, -917518, 1, 0, -917517, 1, 0, -917516, 1, 0, -917515, 1, 0, -917514, 1, 0, -917513, 1, 0, -917512, 1, 0, -917511, 1, 0, -917510, 1, 0, -917509, 1, 0, -917508, 1, 0, -917507, 1, 0, -917506, 1, 0, -917505, 1, 0, -983040, 1, 0, -983039, 1, 0, -983038, 1, 0, -983037, 1, 0, -983036, 1, 0, -983035, 1, 0, -983034, 1, 0, -983033, 1, 0, -983032, 1, 0, -983031, 1, 0, -983030, 1, 0, -983029, 1, 0, -983028, 1, 0, -983027, 1, 0, -983026, 1, 0, -983025, 1, 0, -983024, 1, 0, -983023, 1, 0, -983022, 1, 0, -983021, 1, 0, -983020, 1, 0, -983019, 1, 0, -983018, 1, 0, -983017, 1, 0, -983016, 1, 0, -983015, 1, 0, -983014, 1, 0, -983013, 1, 0, -983012, 1, 0, -983011, 1, 0, -983010, 1, 0, -983009, 1, 0, -983008, 1, 0, -983007, 1, 0, -983006, 1, 0, -983005, 1, 0, -983004, 1, 0, -983003, 1, 0, -983002, 1, 0, -983001, 1, 0, -983000, 0, 0, -851999, 3, 0, -917464, 2, 0, -786463, 3, 0, -851928, 2, 0, -720927, 3, 0, -786392, 2, 0, -655391, 3, 0, -720856, 2, 0, -589855, 3, 0, -655320, 2, 0, -524319, 3, 0, -589784, 2, 0, -458783, 3, 0, -524248, 2, 0, -393247, 3, 0, -458712, 2, 0, -327711, 3, 0, -393176, 2, 0, -262175, 3, 0, -327640, 2, 0, -196639, 3, 0, -262117, 5, 0, -262116, 4, 0, -262115, 4, 0, -262114, 4, 0, -262113, 4, 0, -262112, 4, 0, -262111, 4, 0, -262110, 4, 0, -262109, 4, 0, -262108, 4, 0, -262107, 4, 0, -262106, 4, 0, -262105, 4, 0, -262104, 0, 0, -131103, 3, 0, -196581, 2, 0, -65567, 3, 0, -131045, 2, 0, -31, 3, 0, -65509, 2, 0, 65505, 0, 0, 65506, 4, 0, 65507, 4, 0, 65508, 4, 0, 65509, 4, 0, 65510, 4, 0, 65511, 4, 0, 65512, 4, 0, 65513, 4, 0, 65514, 4, 0, 65515, 4, 0, 65516, 4, 0, 65517, 4, 0, 65518, 4, 0, 65519, 4, 0, 65520, 4, 0, 65521, 4, 0, 65522, 4, 0, 65523, 4, 0, 65524, 4, 0, 65525, 4, 0, 65526, 4, 0, 65527, 4, 0, 65528, 4, 0, 65529, 4, 0, 65530, 4, 0, 65531, 4, 0, 65532, 4, 0, 65533, 4, 0, 65534, 4, 0, 65535, 4, 0, 0, 4, 0, 1, 4, 0, 2, 4, 0, 3, 4, 0, 4, 4, 0, 5, 4, 0, 6, 4, 0, 7, 4, 0, 8, 4, 0, 9, 4, 0, 10, 4, 0, 11, 4, 0, 12, 4, 0, 13, 4, 0, 14, 4, 0, 15, 4, 0, 16, 4, 0, 17, 4, 0, 18, 4, 0, 19, 4, 0, 20, 4, 0, 21, 4, 0, 22, 4, 0, 23, 4, 0, 24, 4, 0, 25, 4, 0, 26, 4, 0, 27, 0, 0 )
+tile_data = PoolIntArray( -589792, 0, 0, -589791, 1, 0, -589790, 1, 0, -589789, 1, 0, -589788, 1, 0, -589787, 1, 0, -589786, 1, 0, -589785, 1, 0, -589784, 1, 0, -589783, 1, 0, -589782, 1, 0, -589781, 1, 0, -589780, 1, 0, -589779, 1, 0, -589778, 1, 0, -589777, 1, 0, -589776, 1, 0, -589775, 1, 0, -589774, 1, 0, -589773, 1, 0, -589772, 1, 0, -589771, 1, 0, -589770, 0, 0, -458756, 0, 0, -458755, 1, 0, -458754, 1, 0, -458753, 1, 0, -524288, 1, 0, -524287, 1, 0, -524286, 1, 0, -524285, 1, 0, -524284, 1, 0, -524283, 1, 0, -524282, 1, 0, -524281, 1, 0, -524280, 1, 0, -524279, 1, 0, -524278, 1, 0, -524277, 1, 0, -524276, 1, 0, -524275, 1, 0, -524274, 1, 0, -524273, 1, 0, -524272, 1, 0, -524271, 1, 0, -524270, 0, 0, -524256, 3, 0, -524234, 2, 0, -393220, 3, 0, -458734, 2, 0, -458725, 0, 0, -458724, 1, 0, -458723, 1, 0, -458722, 1, 0, -458721, 1, 0, -458720, 7, 0, -458698, 2, 0, -327684, 3, 0, -393198, 2, 0, -393189, 3, 0, -393162, 2, 0, -262148, 3, 0, -327662, 8, 0, -327661, 1, 0, -327660, 1, 0, -327659, 1, 0, -327658, 1, 0, -327657, 1, 0, -327656, 1, 0, -327655, 1, 0, -327654, 1, 0, -327653, 7, 0, -327626, 2, 0, -196612, 3, 0, -262090, 2, 0, -131076, 3, 0, -196560, 5, 0, -196559, 4, 0, -196558, 6, 0, -196554, 2, 0, -65540, 3, 0, -131024, 8, 0, -131023, 1, 0, -131022, 7, 0, -131018, 2, 0, -4, 3, 0, -65501, 5, 0, -65500, 4, 0, -65499, 4, 0, -65498, 4, 0, -65497, 6, 0, -65482, 2, 0, 65532, 0, 0, 65533, 4, 0, 65534, 4, 0, 65535, 4, 0, 0, 4, 0, 1, 4, 0, 2, 4, 0, 3, 4, 0, 4, 4, 0, 5, 4, 0, 6, 4, 0, 7, 4, 0, 8, 4, 0, 9, 4, 0, 10, 4, 0, 11, 6, 0, 22, 5, 0, 23, 4, 0, 24, 4, 0, 25, 4, 0, 26, 6, 0, 35, 2, 0, 36, 0, 0, 37, 0, 0, 38, 1, 0, 39, 7, 0, 54, 2, 0, 65547, 3, 0, 65558, 2, 0, 65559, 0, 0, 65560, 0, 0, 65561, 0, 0, 65562, 3, 0, 65571, 2, 0, 65572, 0, 0, 65573, 3, 0, 65590, 2, 0, 131083, 3, 0, 131094, 8, 0, 131095, 1, 0, 131096, 1, 0, 131097, 0, 0, 131098, 0, 0, 131099, 4, 0, 131100, 4, 0, 131101, 4, 0, 131102, 4, 0, 131103, 4, 0, 131104, 4, 0, 131105, 4, 0, 131106, 4, 0, 131107, 0, 0, 131108, 0, 0, 131109, 3, 0, 131126, 2, 0, 196619, 3, 0, 196633, 8, 0, 196634, 1, 0, 196635, 1, 0, 196636, 1, 0, 196637, 1, 0, 196638, 1, 0, 196639, 1, 0, 196640, 1, 0, 196641, 1, 0, 196642, 1, 0, 196643, 1, 0, 196644, 1, 0, 196645, 7, 0, 196653, 5, 0, 196654, 6, 0, 196662, 2, 0, 262155, 3, 0, 262189, 8, 0, 262190, 7, 0, 262198, 2, 0, 327691, 3, 0, 327734, 2, 0, 393227, 3, 0, 393270, 2, 0, 458763, 3, 0, 458776, 5, 0, 458777, 4, 0, 458778, 4, 0, 458779, 4, 0, 458780, 4, 0, 458781, 4, 0, 458782, 6, 0, 458789, 5, 0, 458790, 4, 0, 458791, 4, 0, 458792, 4, 0, 458793, 4, 0, 458794, 4, 0, 458795, 4, 0, 458796, 4, 0, 458797, 4, 0, 458798, 4, 0, 458799, 4, 0, 458800, 4, 0, 458801, 4, 0, 458802, 4, 0, 458803, 4, 0, 458804, 4, 0, 458805, 4, 0, 458806, 0, 0, 524299, 3, 0, 524312, 2, 0, 524318, 3, 0, 524325, 2, 0, 589835, 0, 0, 589836, 4, 0, 589837, 4, 0, 589838, 4, 0, 589839, 4, 0, 589840, 4, 0, 589841, 4, 0, 589842, 4, 0, 589843, 4, 0, 589844, 4, 0, 589845, 4, 0, 589846, 4, 0, 589847, 4, 0, 589848, 0, 0, 589854, 0, 0, 589855, 4, 0, 589856, 4, 0, 589857, 4, 0, 589858, 4, 0, 589859, 4, 0, 589860, 4, 0, 589861, 0, 0 )
 __meta__ = {
 "_edit_lock_": true
 }
+
+[node name="Spikes" type="Area2D" parent="."]
+position = Vector2( 288, 136 )
+collision_layer = 1025
+collision_mask = 1025
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes"]
+position = Vector2( 0.157776, 4.41782 )
+scale = Vector2( 1.40893, 3.62548 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Spikes"]
+position = Vector2( -92.9825, -55.8339 )
+scale = Vector2( 0.32, 1 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Spikes"]
+position = Vector2( 255.807, 4.48222 )
+scale = Vector2( 1, 1.12 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Spikes"]
+position = Vector2( 92.4824, -7.80106 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Spikes"]
+position = Vector2( 60.0369, -104.251 )
+shape = SubResource( 13 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Spikes"]
+position = Vector2( 208.09, -107.897 )
+shape = SubResource( 14 )
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Spikes"]
+position = Vector2( 144, -196.641 )
+shape = SubResource( 15 )
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Spikes"]
+position = Vector2( 476.085, -168 )
+shape = SubResource( 16 )
+
+[node name="spikes" type="TileMap" parent="."]
+tile_set = ExtResource( 71 )
+cell_size = Vector2( 16, 16 )
+collision_layer = 1025
+collision_mask = 1025
+format = 1
+tile_data = PoolIntArray( -262118, 3, 0, -262117, 3, 0, -196561, 1, 0, -131025, 1, 0, 65557, 1, 0, 65563, 2, 0, 65564, 2, 0, 65565, 2, 0, 65566, 2, 0, 65567, 2, 0, 65568, 2, 0, 65569, 2, 0, 65570, 2, 0, 131084, 0, 0, 131093, 1, 0, 196620, 0, 0, 262156, 0, 0, 327692, 0, 0, 393228, 0, 0, 458764, 0, 0, 458775, 1, 0, 524300, 2, 0, 524301, 2, 0, 524302, 2, 0, 524303, 2, 0, 524304, 2, 0, 524305, 2, 0, 524306, 2, 0, 524307, 2, 0, 524308, 2, 0, 524309, 2, 0, 524310, 2, 0, 524311, 2, 0, 524319, 2, 0, 524320, 2, 0, 524321, 2, 0, 524322, 2, 0, 524323, 2, 0, 524324, 2, 0 )
 
 [node name="Player" type="KinematicBody2D" parent="." groups=[
 "Player",
@@ -199,19 +263,19 @@ __meta__ = {
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Player"]
 scale = Vector2( 0.5, 0.5 )
-frames = SubResource( 2 )
+frames = ExtResource( 8 )
 animation = "idle"
-frame = 5
+frame = 1
 playing = true
 offset = Vector2( 0, -1.5 )
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 current = true
 process_mode = 0
-limit_left = -600
-limit_top = -305
-limit_right = 737
-limit_bottom = 85
+limit_left = -320
+limit_top = -240
+limit_right = 1000
+limit_bottom = 250
 limit_smoothed = true
 smoothing_enabled = true
 smoothing_speed = 15.0
@@ -225,6 +289,7 @@ bottom = 320
 }
 
 [node name="CanvasModulate" type="CanvasModulate" parent="Player/Camera2D"]
+visible = false
 color = Color( 0, 0, 0, 1 )
 
 [node name="Light2D" type="Light2D" parent="Player"]
@@ -239,29 +304,38 @@ shadow_gradient_length = 21.6
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 position = Vector2( -0.162598, -0.589752 )
 scale = Vector2( 1, 1.5 )
-shape = SubResource( 3 )
+shape = SubResource( 6 )
 
 [node name="Position2D" type="Position2D" parent="Player"]
 position = Vector2( 21.1756, -1.93715e-07 )
 
-[node name="Area2D" type="Area2D" parent="Player"]
-collision_layer = 1024
+[node name="PLAYERDEATHER" type="Area2D" parent="Player"]
+position = Vector2( 1.97232, -0.276421 )
+scale = Vector2( 13.12, 1.08 )
+collision_layer = 1025
+collision_mask = 1024
+script = ExtResource( 70 )
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Player/Area2D"]
-position = Vector2( -0.175598, -0.533447 )
-scale = Vector2( 1, 1.5 )
-shape = SubResource( 4 )
-disabled = true
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Player/PLAYERDEATHER"]
+position = Vector2( -0.175598, -0.148465 )
+scale = Vector2( 1, 1.72222 )
+shape = SubResource( 7 )
 
 [node name="ghost_timer" type="Timer" parent="Player"]
-wait_time = 0.1
+wait_time = 0.12
 autostart = true
 
+[node name="death_timer" type="Timer" parent="Player"]
+wait_time = 3.0
+one_shot = true
+
 [node name="Stalker" parent="." instance=ExtResource( 43 )]
-position = Vector2( 153.075, -120.075 )
+visible = false
+position = Vector2( 192, -40 )
+ai_enable = false
 
 [node name="box" type="KinematicBody2D" parent="."]
-position = Vector2( 312, -168 )
+position = Vector2( 400, -344 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -275,13 +349,13 @@ region_rect = Rect2( 28, 25, 0, 0 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="box"]
 position = Vector2( 0.75, 0 )
 scale = Vector2( 1.03333, 1 )
-shape = SubResource( 5 )
+shape = SubResource( 8 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="box"]
-occluder = SubResource( 6 )
+occluder = SubResource( 9 )
 
 [node name="red_crystal" type="Area2D" parent="."]
-position = Vector2( -424, -32 )
+position = Vector2( 392, -32 )
 collision_layer = 78
 collision_mask = 78
 script = ExtResource( 2 )
@@ -299,31 +373,10 @@ color = Color( 1, 0, 0, 1 )
 energy = 1.52
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="red_crystal"]
-shape = SubResource( 7 )
-
-[node name="red_crystal2" type="Area2D" parent="."]
-position = Vector2( -184, -40 )
-collision_layer = 78
-collision_mask = 78
-script = ExtResource( 2 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Sprite" type="Sprite" parent="red_crystal2"]
-texture = ExtResource( 5 )
-
-[node name="Light2D" type="Light2D" parent="red_crystal2"]
-texture = ExtResource( 39 )
-texture_scale = 0.5
-color = Color( 1, 0, 0, 1 )
-energy = 1.52
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="red_crystal2"]
-shape = SubResource( 7 )
+shape = SubResource( 10 )
 
 [node name="Torch" type="Area2D" parent="."]
-position = Vector2( 519.448, -126.02 )
+position = Vector2( 432, 96 )
 collision_layer = 78
 collision_mask = 78
 script = ExtResource( 40 )
@@ -337,17 +390,76 @@ enabled = false
 texture = ExtResource( 39 )
 color = Color( 1, 0.631373, 0, 1 )
 energy = 1.73
+shadow_enabled = true
 script = ExtResource( 41 )
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torch"]
-shape = SubResource( 8 )
+shape = SubResource( 11 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torch"]
-frames = SubResource( 9 )
-frame = 2
+frames = SubResource( 12 )
+animation = "notlit"
+playing = true
+
+[node name="Torch2" type="Area2D" parent="."]
+position = Vector2( 56, -80 )
+collision_layer = 78
+collision_mask = 78
+script = ExtResource( 40 )
+__meta__ = {
+"_edit_group_": true
+}
+is_toggleable = true
+
+[node name="Light2D" type="Light2D" parent="Torch2"]
+enabled = false
+texture = ExtResource( 39 )
+color = Color( 1, 0.631373, 0, 1 )
+energy = 1.73
+shadow_enabled = true
+script = ExtResource( 41 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torch2"]
+shape = SubResource( 11 )
+
+[node name="Sprite" type="AnimatedSprite" parent="Torch2"]
+frames = SubResource( 12 )
+animation = "notlit"
+playing = true
+
+[node name="Torch3" type="Area2D" parent="."]
+position = Vector2( 644.252, -47.2141 )
+collision_layer = 78
+collision_mask = 78
+script = ExtResource( 40 )
+__meta__ = {
+"_edit_group_": true
+}
+is_toggleable = true
+
+[node name="Light2D" type="Light2D" parent="Torch3"]
+enabled = false
+texture = ExtResource( 39 )
+color = Color( 1, 0.631373, 0, 1 )
+energy = 1.73
+shadow_enabled = true
+script = ExtResource( 41 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torch3"]
+shape = SubResource( 11 )
+
+[node name="Sprite" type="AnimatedSprite" parent="Torch3"]
+frames = SubResource( 12 )
+animation = "notlit"
 playing = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -361,7 +473,7 @@ size_flags_horizontal = 0
 size_flags_vertical = 0
 size_flags_stretch_ratio = 0.0
 custom_fonts/font = ExtResource( 4 )
-text = "dev-build  0.4 "
+text = "dev-build  0.5"
 align = 3
 valign = 3
 __meta__ = {
@@ -373,16 +485,14 @@ position = Vector2( 319.912, 166.993 )
 script = ExtResource( 3 )
 
 [node name="Tween" type="Tween" parent="Screenshake"]
-
-[node name="Control" type="Control" parent="."]
-margin_right = 40.0
-margin_bottom = 40.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[connection signal="area_entered" from="Player/PLAYERDEATHER" to="Player/PLAYERDEATHER" method="_on_PLAYERDEATHER_area_entered"]
 [connection signal="timeout" from="Player/ghost_timer" to="Player" method="_on_ghost_timer_timeout"]
+[connection signal="timeout" from="Player/death_timer" to="Player" method="_on_death_timer_timeout"]
 [connection signal="body_entered" from="red_crystal" to="red_crystal" method="_on_red_crystal_body_entered"]
-[connection signal="body_entered" from="red_crystal2" to="red_crystal2" method="_on_red_crystal_body_entered"]
 [connection signal="area_entered" from="Torch" to="Torch" method="_on_Area2D2_area_entered"]
 [connection signal="body_entered" from="Torch" to="Torch" method="_on_Area2D2_body_entered"]
+[connection signal="area_entered" from="Torch2" to="Torch2" method="_on_Area2D2_area_entered"]
+[connection signal="body_entered" from="Torch2" to="Torch2" method="_on_Area2D2_body_entered"]
+[connection signal="area_entered" from="Torch3" to="Torch3" method="_on_Area2D2_area_entered"]
+[connection signal="body_entered" from="Torch3" to="Torch3" method="_on_Area2D2_body_entered"]
 [connection signal="tween_completed" from="Screenshake/Tween" to="Screenshake" method="_on_Tween_tween_completed"]

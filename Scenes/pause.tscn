@@ -1,0 +1,80 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Scripts/Control.gd" type="Script" id=1]
+[ext_resource path="res://Textures/UI Stuff/Menu_Pause/Continue.png" type="Texture" id=2]
+[ext_resource path="res://Textures/UI Stuff/Menu_Pause/Settings_selected.png" type="Texture" id=3]
+[ext_resource path="res://Textures/UI Stuff/Menu_Pause/Continue_selected.png" type="Texture" id=4]
+[ext_resource path="res://Textures/UI Stuff/Menu_Pause/return.png" type="Texture" id=5]
+[ext_resource path="res://Textures/UI Stuff/Menu_Pause/return_selected.png" type="Texture" id=6]
+[ext_resource path="res://Textures/UI Stuff/Menu_Pause/PAUSE_selectedt.png" type="Texture" id=7]
+[ext_resource path="res://Textures/UI Stuff/Menu_Pause/Settings.png" type="Texture" id=8]
+
+[node name="pause" type="Control"]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="black" type="ColorRect" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.784314 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="black"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -64.0
+margin_right = 64.0
+margin_bottom = 44.0
+custom_constants/margin_top = 30
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="bruh" type="VBoxContainer" parent="black/MarginContainer"]
+margin_top = 30.0
+margin_right = 128.0
+margin_bottom = 170.0
+
+[node name="TextureRect" type="TextureRect" parent="black/MarginContainer/bruh"]
+margin_right = 128.0
+margin_bottom = 32.0
+texture = ExtResource( 7 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="black/MarginContainer/bruh"]
+margin_top = 36.0
+margin_right = 128.0
+margin_bottom = 140.0
+alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="black/MarginContainer/bruh/VBoxContainer"]
+margin_right = 128.0
+margin_bottom = 32.0
+texture_normal = ExtResource( 2 )
+texture_hover = ExtResource( 4 )
+texture_focused = ExtResource( 4 )
+
+[node name="TextureButton2" type="TextureButton" parent="black/MarginContainer/bruh/VBoxContainer"]
+margin_top = 36.0
+margin_right = 128.0
+margin_bottom = 68.0
+texture_normal = ExtResource( 8 )
+texture_hover = ExtResource( 3 )
+texture_focused = ExtResource( 3 )
+
+[node name="TextureButton3" type="TextureButton" parent="black/MarginContainer/bruh/VBoxContainer"]
+margin_top = 72.0
+margin_right = 128.0
+margin_bottom = 104.0
+texture_normal = ExtResource( 5 )
+texture_hover = ExtResource( 6 )
+texture_focused = ExtResource( 6 )
+[connection signal="pressed" from="black/MarginContainer/bruh/VBoxContainer/TextureButton" to="." method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="black/MarginContainer/bruh/VBoxContainer/TextureButton3" to="." method="_on_TextureButton3_pressed"]
